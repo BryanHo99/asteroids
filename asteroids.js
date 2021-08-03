@@ -68,7 +68,7 @@ function asteroids() {
         new Audio("audio/fire.wav").play();
     });
     Observable.interval(3000)
-        .subscribe(() => g.attr("data-invincibility", "false"));
+        .subscribe(() => (g.attr("data-invincibility", "false"), g.attr("visibility", "visible")));
     Observable.interval(10)
         .filter(() => g.attr("data-invincibility") == "true")
         .subscribe(() => g.attr("visibility", "visible"));

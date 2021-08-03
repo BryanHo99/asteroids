@@ -147,7 +147,7 @@ function asteroids() {
     
     // Remove invincibility after 3 seconds
     Observable.interval(3000)
-        .subscribe(() => g.attr("data-invincibility", "false"));
+        .subscribe(() => (g.attr("data-invincibility", "false"), g.attr("visibility", "visible")));
     
     // The following 2 Observables below are responsible for making the ship blink, indicating that it is invincible
     Observable.interval(10)
